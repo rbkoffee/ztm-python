@@ -40,7 +40,3 @@ print(hex(14))
 # Converting from hex/bin back to int can be done via int('number','base')
 int('0xe',16) # 14
 int('0b1101',2) # 13
-
-selfish = '12345678'
-        #  01234567
-print(selfish[::-1])
