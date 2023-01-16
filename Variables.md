@@ -61,6 +61,8 @@ some_value += 2 is equivalent to some_value = some_value + 2
 Can be declared with '' , "" , '''  '''
 ''' can be used for multi-line strings '''
 
+Strings are immutable until the value of the variable they're assigned to is reassigned.
+
 ### Concatenation
 ```python
 # Combining two variables of type 'str'
@@ -101,4 +103,23 @@ Python2 (and 3) can use `.format` to achieve this
 ```python
 print('hi {}. You are {} years old'.format('Johnny', '55')) # uses positional arguments 
 print('hi {}. You are {} years old'.format(name,age)) # uses variables
+```
+
+## Indexing a string
+
+```python
+selfish = '12345678'
+        #  01234567
+print(selfish[0:7:2])   
+1357
+```
+
+Slices index from [start:stop:step]
+Default values are assumed if not entered; starts at 0, steps by 1, continues until the end
+e.g.
+
+```python
+[4:] # starts at 5th character and continues by one until the end -> 5678
+[:5] # starts at 1st character and continues until the fourth entry prints that and then stops - it doesn't print entry 5 -> 12345
+[::-1] # reverses the string
 ```
