@@ -68,3 +68,35 @@ basket.index(100, 1, 5) - # Returns the index position of the item - starting fr
 ```
 
 Can use the python keyword `in` to _assert_ that something is in a list and return a BOOL indicating if it's present.
+
+```python
+basket = [1,2,3,4,5,100]
+
+print('potato' in basket) # Returns false
+basket.count(3) # Returns the number of times something appears in a list
+basket.sort() # Sorts and _modifies_ list in place alphanumerically
+sorted(basket) # Prints a sorted output _without_ modifying the original
+basket.reverse() # Reverses the index position and modifies the order of the list 1st becomes Last etc
+print(basket[::-1]) # Will reverse in place and not modify the list
+
+# To create a quick list
+basket = list(range(100)) # Creates a 100 item list
+
+# .join method allows the addition of a string to an iterable object (list)
+basket = ['1','2','3','4','5','100']
+sentence =  'potato'.join(basket)
+print(sentence)
+```
+
+## List Unpacking
+
+`a,b,c *other, d = [1,2,3,4,5,6,7,8,9]`
+
+This allows for you to assign the first `n` items in the list and the last and have the rest as the placeholder `other`
+
+print(a) = 1 # int
+print(other) = [4,5,6,7,8] # list
+print(d) = 9 # int
+
+Allows you to unpack specific parts of a list at will
+
