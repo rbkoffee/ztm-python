@@ -100,3 +100,37 @@ print(d) = 9 # int
 
 Allows you to unpack specific parts of a list at will
 
+# Dictionary -v- List
+
+* Lists are ordered, Dicitonaries aren't. 
+* Lists store Values only, Dictionaries are Key:Value stores
+
+## Building dictionaries
+
+- Keys need to be immuatable as they're stored in memory - cannot use lists as keys.
+- Keys need to be unique - replicated keys will update the key value.
+
+If you're unsure of the contents of a dictionary - use a `.get` method and don't assume a key value is there and havet he function fail.
+
+Can also use the `in` query - 
+
+```python
+user = {
+    'basket' : [1,2,3],
+    'salutation' : 'Mr.',
+    'age' : 20
+}
+
+print('basket' in user) = True
+# To search keys/values use: 
+print('age' in user.keys()) = True
+print(20 in user.values()) = True # iterates over keys in dict
+print(user.items()) # Prints tuple of all items in dict
+user.clear() # scrubs the dict
+user2=user.copy() # Creates a new dict using a copy of user
+user.pop('age') # Removes this key from the dict
+user.popitem() # Removes last k:v from dict in  Py3.7+ 
+user.update({'age' : 25}) # Updates key in place, if a new key, adds the key.
+```
+
+
