@@ -107,7 +107,7 @@ Allows you to unpack specific parts of a list at will
 
 ## Building dictionaries
 
-- Keys need to be immuatable as they're stored in memory - cannot use lists as keys.
+- Keys need to be immuatable as they're stored in memory - cannot use lists as keys - but you can use tuples.
 - Keys need to be unique - replicated keys will update the key value.
 
 If you're unsure of the contents of a dictionary - use a `.get` method and don't assume a key value is there and havet he function fail.
